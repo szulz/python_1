@@ -11,7 +11,7 @@ def load_db():
         print('Creating the csv file...')
         data = {
             'User': [],
-            'Password': []0
+            'Password': []
         }
         df = pd.DataFrame(data)
         df.to_csv(file_path, index=False)
