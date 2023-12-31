@@ -6,15 +6,16 @@ def load_db():
     file_path = 'users.csv'
     try:
         print('csv loaded successfully!')
+        df = pd.read_csv(file_path)
     except:
         print('Creating the csv file...')
         data = {
             'User': [],
-            'Password': []
+            'Password': []0
         }
         df = pd.DataFrame(data)
         df.to_csv(file_path, index=False)
-    df = pd.read_csv(file_path)
+        df = pd.read_csv(file_path)
     return df
 
 
@@ -71,6 +72,6 @@ def run_program():
         if selector == 2:
             print('Exiting the program...')
             return False
-        
+
 
 run_program()
